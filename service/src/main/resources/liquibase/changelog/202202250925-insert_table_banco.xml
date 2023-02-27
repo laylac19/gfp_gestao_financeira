@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                      http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.17.xsd">
+
+    <changeSet id="1677515296886-1" author="basis">
+        <insert tableName="banco" schemaName="">
+            <column name="id" valueSequenceNext="seq_banco"/>
+            <column name="nome" value="Nubank"/>
+            <column name="status" valueBoolean="false"/>
+        </insert>
+        <insert tableName="banco" schemaName="">
+            <column name="id" valueSequenceNext="seq_banco"/>
+            <column name="nome" value="Inter"/>
+            <column name="status" valueBoolean="false"/>
+        </insert>
+        <insert tableName="banco" schemaName="">
+            <column name="id" valueSequenceNext="seq_banco"/>
+            <column name="nome" value="Bando do Brasil"/>
+            <column name="status" valueBoolean="false"/>
+        </insert>
+        <insert tableName="banco" schemaName="">
+            <column name="id" valueSequenceNext="seq_banco"/>
+            <column name="nome" value="Caixa"/>
+            <column name="status" valueBoolean="false"/>
+        </insert>
+        <insert tableName="banco" schemaName="">
+            <column name="id" valueSequenceNext="seq_banco"/>
+            <column name="nome" value="Banestes"/>
+            <column name="status" valueBoolean="false"/>
+        </insert>
+    </changeSet>
+</databaseChangeLog>

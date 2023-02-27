@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                      http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.17.xsd">
+
+    <changeSet id="1677515186493-1" author="layla.couto">
+        <createSequence incrementBy="1" sequenceName="seq_aplicacao" startValue="1"/>
+        <createTable tableName="aplicacao_caixinha">
+            <column name="id" type="BIGINT">
+                <constraints nullable="false" primaryKey="true" primaryKeyName="pk_aplicacao_caixinha"/>
+            </column>
+            <column name="valor" type="DOUBLE">
+                <constraints nullable="false"/>
+            </column>
+            <column name="data_lancamento" type="DATETIME">
+                <constraints nullable="false"/>
+            </column>
+            <column name="status" type="BOOLEAN">
+                <constraints nullable="false"/>
+            </column>
+            <column name="caixinha_id" type="BIGINT">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+        <addUniqueConstraint columnNames="caixinha_id" constraintName="uc_aplicacao_caixinha_caixinha" tableName="aplicacao_caixinha"/>
+        <addForeignKeyConstraint baseColumnNames="caixinha_id" baseTableName="aplicacao_caixinha" constraintName="FK_APLICACAO_CAIXINHA_ON_CAIXINHA" referencedColumnNames="id" referencedTableName="caixinha"/>
+    </changeSet>
+</databaseChangeLog>

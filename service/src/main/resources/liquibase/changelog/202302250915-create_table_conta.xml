@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                      http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.17.xsd">
+
+    <changeSet id="1677515090250-1" author="basis">
+        <createSequence incrementBy="1" sequenceName="seq_conta" startValue="1"/>
+        <createTable tableName="conta">
+            <column name="id" type="BIGINT">
+                <constraints nullable="false" primaryKey="true" primaryKeyName="pk_conta"/>
+            </column>
+            <column name="banco_id" type="BIGINT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="tipo_conta" type="INT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="saldo" type="DOUBLE">
+                <constraints nullable="false"/>
+            </column>
+            <column name="status" type="BOOLEAN">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+        <addForeignKeyConstraint baseColumnNames="banco_id" baseTableName="conta" constraintName="FK_CONTA_ON_BANCO"
+                                 referencedColumnNames="id" referencedTableName="banco"/>
+    </changeSet>
+</databaseChangeLog>
