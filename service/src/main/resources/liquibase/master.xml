@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+    http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.5.xsd">
+
+
+    <include file="liquibase/changelog/202302250905-create_table_banco.xml"/>
+    <include file="liquibase/changelog/202302250906-create_table_bandeira.xml"/>
+    <include file="liquibase/changelog/202302250915-create_table_conta.xml"/>
+    <include file="liquibase/changelog/202302250908-create_table_caixinha.xml"/>
+    <include file="liquibase/changelog/202302250914-create_table_cartao.xml"/>
+    <include file="liquibase/changelog/202302250900-create-table-aplicacao.xml"/>
+    <include file="liquibase/changelog/202302250916-create_table_fatura.xml"/>
+    <include file="liquibase/changelog/202302250918-create_table_movimentacao.xml"/>
+    <include file="liquibase/changelog/202202250925-insert_table_banco.xml"/>
+    <include file="liquibase/changelog/202302240929-insert_table_bandeira.xml"/>
+
+</databaseChangeLog>
