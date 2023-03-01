@@ -2,12 +2,16 @@ package com.gestaoFinanceitaPessoal.gfp.service;
 
 import com.gestaoFinanceitaPessoal.gfp.domain.Conta;
 import com.gestaoFinanceitaPessoal.gfp.repository.ContaRepository;
+import com.gestaoFinanceitaPessoal.gfp.service.dto.CaixinhaListDTO;
 import com.gestaoFinanceitaPessoal.gfp.service.dto.ContaDTO;
+import com.gestaoFinanceitaPessoal.gfp.service.dto.ContaListDTO;
 import com.gestaoFinanceitaPessoal.gfp.service.exception.EntityNotFoundException;
 import com.gestaoFinanceitaPessoal.gfp.service.mapper.ContaMapper;
 import com.gestaoFinanceitaPessoal.gfp.service.util.ConstanteUtil;
 import com.gestaoFinanceitaPessoal.gfp.service.util.MensagemContaUtil;
 import lombok.RequiredArgsConstructor;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -23,6 +27,10 @@ public class ContaService {
     public Conta findEntity(Long id) {
         return repository.findById(id).orElseThrow(
                 () -> new EntityNotFoundException(MensagemContaUtil.ENTITY_NOT_FOUND));
+    }
+
+    public Page<ContaListDTO> findAll(Pageable pageable) {
+        return repository.listAll(pageable);
     }
 
     public ContaDTO findByID(Long id) {
