@@ -20,18 +20,18 @@ public class ContaDTO implements Serializable {
 
     private Long id;
 
-    @NotNull(message = MensagemBancoUtil.ID_BANCO_NULL)
+    @NotNull(message = MensagemBancoUtil.NULL_BANK_ID)
     private Long idBanco;
 
-    @NotNull(message = MensagemBancoUtil.NOME_BANCO_NULL)
-    @NotEmpty(message = MensagemBancoUtil.NOME_BANCO_VAZIO)
+    @NotNull(message = MensagemBancoUtil.BANK_NAME_NULL)
+    @NotEmpty(message = MensagemBancoUtil.BANK_NAME_EMPTY)
     private String nomeBanco;
 
-    @NotNull(message = MensagemContaUtil.TIPO_CONTA_NULL)
-    @NotEmpty(message = MensagemContaUtil.TIPO_CONTA_VAZIO)
+    @NotNull(message = MensagemContaUtil.ACCOUNT_TYPE_NULL)
+    @NotEmpty(message = MensagemContaUtil.ACCOUNT_TYPE_EMPTY)
     private TipoConta tipoConta;
 
-    @NotNull(message = MensagemContaUtil.SALDO_APLICACAO_NULLO)
+    @NotNull(message = MensagemContaUtil.NULL_INVESTMENT_BALANCE)
     private Double saldo;
 
     private Boolean status = false;

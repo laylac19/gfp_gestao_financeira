@@ -20,32 +20,32 @@ public class CartaoDTO implements Serializable {
 
     private Long id;
 
-    @NotNull(message = MensagemBancoUtil.ID_BANCO_NULL)
+    @NotNull(message = MensagemBancoUtil.NULL_BANK_ID)
     private Long idBanco;
 
-    @NotNull(message = MensagemBancoUtil.NOME_BANCO_NULL)
-    @NotEmpty(message = MensagemBancoUtil.NOME_BANCO_VAZIO)
+    @NotNull(message = MensagemBancoUtil.BANK_NAME_NULL)
+    @NotEmpty(message = MensagemBancoUtil.BANK_NAME_EMPTY)
     private String nomeBanco;
 
-    @NotNull(message = MensagemBandeiraUtil.ID_BANDEIRA_NULL)
+    @NotNull(message = MensagemBandeiraUtil.NULL_CARD_FLAG_ID)
     private Long idBandeira;
 
-    @NotNull(message = MensagemBandeiraUtil.NOME_BANDEIRA_NULL)
-    @NotEmpty(message = MensagemBandeiraUtil.NOME_BANDEIRA_VAZIO)
+    @NotNull(message = MensagemBandeiraUtil.NULL_CARD_FLAG_NAME)
+    @NotEmpty(message = MensagemBandeiraUtil.EMPTY_CARD_FLAG_NAME)
     private String bandeira;
 
-    @NotNull(message = MensagemCartaoUtil.LIMITE_CARTAO_NULL)
+    @NotNull(message = MensagemCartaoUtil.NULL_CARD_LIMIT)
     private Double limite;
 
-    @NotNull(message = MensagemCartaoUtil.APELIDO_CARTAO_NULL)
+    @NotNull(message = MensagemCartaoUtil.NICKNAME_CARD_LIMIT)
     @NotEmpty(message = MensagemCartaoUtil.APELIDO_CARTAO_VAZIO)
     private String apelido;
 
-    @NotNull(message = MensagemCartaoUtil.ID_CARTAO_VIRTUAL_NULL)
+    @NotNull(message = MensagemCartaoUtil.NULL_VIRTUAL_CARD_ID)
     private Long idCartaoVirtual;
 
-    @NotNull(message = MensagemCartaoUtil.NOME_CARTAO_VIRTUAL_NULL)
-    @NotEmpty(message =MensagemCartaoUtil.NOME_CARTAO_VIRTUAL_VAZIO)
+    @NotNull(message = MensagemCartaoUtil.NAME_VIRTUAL_CARD_NULL)
+    @NotEmpty(message =MensagemCartaoUtil.NAME_EMPTY_VIRTUAL_CARD)
     private String apelidoCartaoVirtual;
 
     private Boolean status = false;

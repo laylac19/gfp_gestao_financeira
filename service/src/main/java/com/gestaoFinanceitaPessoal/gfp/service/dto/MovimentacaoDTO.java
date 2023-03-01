@@ -20,18 +20,18 @@ public class MovimentacaoDTO implements Serializable {
 
     private Long id;
 
-    @NotNull(message = MensagemMovimentacaoUtil.DATA_LANCAMENTO_NULL)
+    @NotNull(message = MensagemMovimentacaoUtil.RELEASE_DATE_NULL)
     private LocalDate dataLancamento;
 
-    @NotNull(message = MensagemMovimentacaoUtil.DESCRICAO_NULL)
-    @NotEmpty(message = MensagemMovimentacaoUtil.DESCRICAO_VAZIA)
+    @NotNull(message = MensagemMovimentacaoUtil.NULL_DESCRIPTION)
+    @NotEmpty(message = MensagemMovimentacaoUtil.EMPTY_DESCRIPTION)
     private String descricao;
 
-    @NotNull(message = MensagemMovimentacaoUtil.VALOR_NULL)
-    @NotEmpty(message = MensagemMovimentacaoUtil.VALOR_VAZIO)
+    @NotNull(message = MensagemMovimentacaoUtil.VALUE_NULL)
+    @NotEmpty(message = MensagemMovimentacaoUtil.EMPTY_VALUE)
     private Double valor;
 
-    @NotNull(message = MensagemMovimentacaoUtil.TIPO_MOVIMENTACAO_NULL)
+    @NotNull(message = MensagemMovimentacaoUtil.NULL_MOVEMENT_TYPE)
     private TipoMovimentacao movimentacao;
 
     private LocalDate dataVencimento;

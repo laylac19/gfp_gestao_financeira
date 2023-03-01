@@ -18,19 +18,19 @@ import java.time.LocalDate;
 public class FaturaDTO implements Serializable {
     private Long id;
 
-    @NotNull(message = MensagemCartaoUtil.ID_CARTAO_NULL)
+    @NotNull(message = MensagemCartaoUtil.NULL_CARD_ID)
     private Long idCartao;
 
-    @NotNull(message = MensagemCartaoUtil.APELIDO_CARTAO_NULL)
+    @NotNull(message = MensagemCartaoUtil.NICKNAME_CARD_LIMIT)
     private String apelidoCartao;
 
-    @NotNull(message = MensagemFaturaUtil.MES_NULL)
+    @NotNull(message = MensagemFaturaUtil.MONTH_NULL)
     private String mes;
 
-    @NotNull(message = MensagemFaturaUtil.DATA_FECHAMENTO_NULL)
+    @NotNull(message = MensagemFaturaUtil.CLOSING_DATE_NULL)
     private LocalDate dataFechamento;
 
-    @NotNull(message = MensagemFaturaUtil.DATA_VENCIMENTO_NULL)
+    @NotNull(message = MensagemFaturaUtil.EXPIRATION_DATE_NULL)
     private LocalDate dataVenciemnto;
 
     private Double valorDisonivel;

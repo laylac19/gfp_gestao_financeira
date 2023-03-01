@@ -5,11 +5,10 @@ import lombok.experimental.UtilityClass;
 @UtilityClass
 public class MensagemCartaoUtil {
 
-    public static final String ID_CARTAO_NULL = "ID do Cartão Não Pode Ser Nulo";
-    public static final String LIMITE_CARTAO_NULL = "O Lmite do Cartão Não Pode Ser Nulo";
-    public static final String APELIDO_CARTAO_NULL = "O Apelido do Cartão Não Pode Ser Nulo";
-    public static final String APELIDO_CARTAO_VAZIO = "O Apelido do Cartão Não Pode Ser Vazio";
-    public static final String ID_CARTAO_VIRTUAL_NULL = "ID do Cartão Virtual Não Pode Ser Nulo";
-    public static final String NOME_CARTAO_VIRTUAL_NULL = "Nome do Cartão Virtual Não Pode Ser Nulo";
-    public static final String NOME_CARTAO_VIRTUAL_VAZIO = "Nome do Cartão Virtual Não Pode Ser Vazio";
+    public static final String NULL_CARD_ID = "ID do Cartão Não Pode Ser Nulo";
+    public static final String NULL_CARD_LIMIT = "O Lmite do Cartão Não Pode Ser Nulo";
+    public static final String NICKNAME_CARD_LIMIT = "O Apelido do Cartão Não Pode Ser Nulo";
+    public static final String NULL_VIRTUAL_CARD_ID = "ID do Cartão Virtual Não Pode Ser Nulo";
+    public static final String NAME_VIRTUAL_CARD_NULL = "Nome do Cartão Virtual Não Pode Ser Nulo";
+    public static final String NAME_EMPTY_VIRTUAL_CARD = "Nome do Cartão Virtual Não Pode Ser Vazio";
 }

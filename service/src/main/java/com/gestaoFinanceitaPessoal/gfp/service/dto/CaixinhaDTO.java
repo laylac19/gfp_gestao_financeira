@@ -21,22 +21,22 @@ public class CaixinhaDTO implements Serializable {
 
     private Long id;
 
-    @NotNull(message = MensagemBancoUtil.ID_BANCO_NULL)
+    @NotNull(message = MensagemBancoUtil.NULL_BANK_ID)
     private Long idBanco;
 
-    @NotNull(message = MensagemBancoUtil.NOME_BANCO_NULL)
-    @NotEmpty(message = MensagemBancoUtil.NOME_BANCO_VAZIO)
+    @NotNull(message = MensagemBancoUtil.BANK_NAME_NULL)
+    @NotEmpty(message = MensagemBancoUtil.BANK_NAME_EMPTY)
     private String nomeBanco;
 
-    @NotNull(message = MensagemCaixinhaUtil.NOME_CAIXINHA_NULL)
-    @NotEmpty(message = MensagemCaixinhaUtil.NOME_CAIXINHA_VAZIO)
+    @NotNull(message = MensagemCaixinhaUtil.BOX_NAME_NULL)
+    @NotEmpty(message = MensagemCaixinhaUtil.BOX_NAME_EMPTY)
     private String nomeCaixinha;
 
-    @NotNull(message = MensagemCaixinhaUtil.DESCRICAO_CAIXINHA_NULL)
-    @NotEmpty(message = MensagemCaixinhaUtil.DESCRICAO_CAIXINHA_VAZIA)
+    @NotNull(message = MensagemCaixinhaUtil.DESCRIPTION_BOX_NULL)
+    @NotEmpty(message = MensagemCaixinhaUtil.DESCRIPTION_EMPTY_BOX)
     private String descricao;
 
-    @NotNull(message = MensagemCaixinhaUtil.VALOR_TOTAL_CAIXINHA_NULL)
+    @NotNull(message = MensagemCaixinhaUtil.TOTAL_VALUE_BOX_NULL)
     private Double valorTotal;
 
     private Boolean status = false;

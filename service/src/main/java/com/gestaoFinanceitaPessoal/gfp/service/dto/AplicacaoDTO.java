@@ -20,19 +20,19 @@ public class AplicacaoDTO implements Serializable {
 
     private Long id;
 
-    @NotNull(message = MensagemAplicacaoUtil.VALOR_APLICACAO_NULLO)
+    @NotNull(message = MensagemAplicacaoUtil.NULL_INCOME_AMOUNT)
     private Double valor;
 
-    @NotNull(message = MensagemAplicacaoUtil.DATA_LANCAMENTO_APLICACAO_NULLO)
+    @NotNull(message = MensagemAplicacaoUtil.INCOME_INPUT_DATE_NULL)
     private LocalDateTime dataLancamento;
 
     private Boolean status = false;
 
-    @NotNull(message = MensagemCaixinhaUtil.ID_CAIXINHA_NULL)
+    @NotNull(message = MensagemCaixinhaUtil.BOX_ID_NULL)
     private Long idCaixinha;
 
-    @NotNull(message = MensagemCaixinhaUtil.NOME_CAIXINHA_NULL)
-    @NotEmpty(message = MensagemCaixinhaUtil.NOME_CAIXINHA_VAZIO)
+    @NotNull(message = MensagemCaixinhaUtil.BOX_NAME_NULL)
+    @NotEmpty(message = MensagemCaixinhaUtil.BOX_NAME_EMPTY)
     private String nomeCaixinha;
 
 }
