@@ -4,5 +4,5 @@ import lombok.experimental.UtilityClass;
 
 @UtilityClass
 public class ConstanteUtil {
-    public static final Double RESET_BALANCE = 0.0;
+    public static final Double SET_ZERO_BALANCE = 0.0;
 }

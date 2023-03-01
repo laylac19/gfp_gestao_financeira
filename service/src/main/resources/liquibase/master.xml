@@ -16,5 +16,6 @@
     <include file="liquibase/changelog/202302250918-create_table_movimentacao.xml"/>
     <include file="liquibase/changelog/202202250925-insert_table_banco.xml"/>
     <include file="liquibase/changelog/202302240929-insert_table_bandeira.xml"/>
+    <include file="liquibase/changelog/202303010907-alter_table_cartao.xml"/>
 
 </databaseChangeLog>

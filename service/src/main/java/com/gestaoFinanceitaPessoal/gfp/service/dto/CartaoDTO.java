@@ -1,5 +1,6 @@
 package com.gestaoFinanceitaPessoal.gfp.service.dto;
 
+import com.gestaoFinanceitaPessoal.gfp.domain.enums.TipoCartao;
 import com.gestaoFinanceitaPessoal.gfp.service.util.MensagemBancoUtil;
 import com.gestaoFinanceitaPessoal.gfp.service.util.MensagemBandeiraUtil;
 import com.gestaoFinanceitaPessoal.gfp.service.util.MensagemCartaoUtil;
@@ -23,6 +24,9 @@ public class CartaoDTO implements Serializable {
     @NotNull(message = MensagemBancoUtil.NULL_BANK_ID)
     private Long idBanco;
 
+    @NotNull(message = MensagemCartaoUtil.NULL_IDENTIFIER)
+    private Integer identificador;
+
     @NotNull(message = MensagemBancoUtil.BANK_NAME_NULL)
     @NotEmpty(message = MensagemBancoUtil.BANK_NAME_EMPTY)
     private String nomeBanco;
@@ -38,8 +42,11 @@ public class CartaoDTO implements Serializable {
     private Double limite;
 
     @NotNull(message = MensagemCartaoUtil.NICKNAME_CARD_LIMIT)
-    @NotEmpty(message = MensagemCartaoUtil.APELIDO_CARTAO_VAZIO)
+    @NotEmpty(message = MensagemCartaoUtil.NICKNAME_CARD_LIMIT)
     private String apelido;
+
+    @NotNull(message = MensagemCartaoUtil.NULL_CARD_TYPE)
+    private TipoCartao tipoCartao;
 
     @NotNull(message = MensagemCartaoUtil.NULL_VIRTUAL_CARD_ID)
     private Long idCartaoVirtual;

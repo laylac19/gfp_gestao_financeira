@@ -1,7 +1,10 @@
 package com.gestaoFinanceitaPessoal.gfp.domain;
 
+import com.gestaoFinanceitaPessoal.gfp.domain.enums.TipoCartao;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
+import jakarta.persistence.EnumType;
+import jakarta.persistence.Enumerated;
 import jakarta.persistence.FetchType;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -28,6 +31,9 @@ public class Cartao implements Serializable {
     @Column(name = "id", nullable = false)
     private Long id;
 
+    @Column(name = "identificador", nullable = false)
+    private Integer identificador;
+
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "banco_id", referencedColumnName = "id", nullable = false)
     private Banco banco;
@@ -41,6 +47,10 @@ public class Cartao implements Serializable {
 
     @Column(name = "apelido", nullable = false)
     private String apelido;
+
+    @Column(name = "tipoCartao", nullable = false)
+    @Enumerated(EnumType.ORDINAL)
+    private TipoCartao tipoCartao;
 
     @OneToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "cartao_id", referencedColumnName = "id")
