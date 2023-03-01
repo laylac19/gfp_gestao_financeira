@@ -4,10 +4,10 @@ import lombok.AllArgsConstructor;
 
 @AllArgsConstructor
 public enum TipoMovimentacao {
-    ENTRADA(1, "Entrada"),
-    SAIDA(2, "Saída"),
-    DESPESA_FIXA(3, "Despesa Fixa"),
-    COMPRA_CARTAO_CREDITO(4, "Compra no Cartão de Crédito");
+    ENTRADA(0, "Entrada"),
+    SAIDA(1, "Saída"),
+    DESPESA_FIXA(2, "Despesa Fixa"),
+    COMPRA_CARTAO_CREDITO(3, "Compra no Cartão de Crédito");
 
     private final Integer id;
     private final String value;
